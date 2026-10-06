@@ -1,0 +1,6 @@
+{
+  "name": "SST Sena - Herramienta Pedagógica de Identificación de Riesgos",
+  "description": "Herramienta pedagógica interactiva guiada por un Instructor SENA con 13 años de experiencia para identificar factores de riesgos laborales, aplicar formatos según GTC 45, analizar casos reales y formular soluciones preventivas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

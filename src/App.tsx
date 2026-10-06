@@ -12,7 +12,7 @@ import { ExportModal } from './components/ExportModal';
 import { ImageCustomizerModal } from './components/ImageCustomizerModal';
 import { ShieldCheck, GraduationCap, CheckCircle } from 'lucide-react';
 
-const DEFAULT_INSTRUCTOR_IMAGE = '/src/assets/images/instructor_sena_sst_1791302813723.jpg';
+const DEFAULT_INSTRUCTOR_IMAGE = '/src/assets/images/sena_taller_sst_oficial_1791304292072.jpg';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'conceptos' | 'sectores' | 'formato' | 'caso' | 'evaluacion'>('conceptos');
@@ -23,7 +23,11 @@ export default function App() {
 
   // Permanent image across all windows
   const [currentImage, setCurrentImage] = useState<string>(() => {
-    return localStorage.getItem('sena_sst_current_image') || DEFAULT_INSTRUCTOR_IMAGE;
+    const saved = localStorage.getItem('sena_sst_current_image');
+    if (saved && !saved.includes('instructor_sena_sst_1791302813723')) {
+      return saved;
+    }
+    return DEFAULT_INSTRUCTOR_IMAGE;
   });
 
   const handleSaveImage = (newImage: string) => {
